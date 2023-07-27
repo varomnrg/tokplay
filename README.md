@@ -53,12 +53,12 @@ TokPlay is a video promotion website that allows users watch videos. This platfo
 
 ### comments
 
-| fields     | type     |
+| fields     | type     |                                        |
 | :--------- | :------- | -------------------------------------- |
-| `videoId`  | `string` |
-| `userId`   | `string` |
+| `videoId`  | `string` |                                        |
+| `userId`   | `string` |                                        |
 | `username` | `string` | added to make read faster on websocket |
-| `comment`  | `string` |
+| `comment`  | `string` |                                        |
 
 ## How to run project locally
 
@@ -86,7 +86,6 @@ TokPlay is a video promotion website that allows users watch videos. This platfo
   PORT=<port>
   DB_URL=mongodb://127.0.0.1:27017/<dbname>
   JWT_SECRET=<any string>
-
 ```
 
 5. Start the development server
