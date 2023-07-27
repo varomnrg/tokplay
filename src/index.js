@@ -36,7 +36,7 @@ app.use((req, _, next) => {
 });
 
 // Routes
-app.use("/api", router);
+app.use("/", router);
 
 // Error handling
 app.use(errors()); // Celebrate error handler

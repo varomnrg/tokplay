@@ -48,6 +48,10 @@ const videoComment = Joi.object().keys({
     comment: Joi.string().required(),
 });
 
+const getUser = Joi.object().keys({
+    userId: Joi.string().required(),
+});
+
 module.exports = {
     createUser,
     loginUser,
@@ -58,4 +62,5 @@ module.exports = {
     videoDetails,
     addVideo,
     videoComment,
+    getUser,
 };

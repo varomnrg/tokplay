@@ -23,9 +23,8 @@ exports.register = async (payload) => {
     const result = await user.save();
 
     return {
-        id: result._id,
+        _id: result._id,
         username: result.username,
         email: result.email,
-        password: result.password,
     };
 };
