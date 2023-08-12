@@ -29,8 +29,8 @@ const addProduct = Joi.object().keys({
 });
 
 const videoThumbnailList = Joi.object().keys({
-    tags: Joi.string(),
-    q: Joi.string(),
+    tags: Joi.string().optional(),
+    q: Joi.string().optional(),
 });
 
 const videoDetails = Joi.object().keys({

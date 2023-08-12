@@ -3,6 +3,7 @@ const VideosServices = require("../services/videos");
 exports.getThumbnailList = async (req, res, next) => {
     try {
         const { tags, q: query } = req.query;
+        console.log(tags,query)
         let thumbnailList;
         if (!tags) {
             thumbnailList = await VideosServices.getThumbnailList(query || "");

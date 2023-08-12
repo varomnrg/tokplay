@@ -16,7 +16,7 @@ exports.getVideoComments = async (req, res, next) => {
 
 exports.postVideoComment = async (req, res, next) => {
     try {
-        const userId = req.user._id.toString();
+        const userId = req.user.id.toString();
         const name = await usersServices.getUserName(userId);
         const { videoId } = req.params;
         const { comment } = req.body;

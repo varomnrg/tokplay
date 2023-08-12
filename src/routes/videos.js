@@ -4,13 +4,7 @@ const videosController = require("../controller/videos");
 const { videoThumbnailList, videoDetails, addVideo } = require("../utils/validationSchema");
 
 // Get video thumbnail list
-router.get(
-    "/thumbnail",
-    celebrate({
-        [Segments.QUERY]: videoThumbnailList,
-    }),
-    videosController.getThumbnailList
-);
+router.get("/thumbnail", videosController.getThumbnailList);
 
 // Get video details with videoId
 router.get(
