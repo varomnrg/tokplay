@@ -32,3 +32,21 @@ exports.postVideoComment = async (req, res, next) => {
         next(err);
     }
 };
+
+exports.postGuestVideoComment = async (req, res, next) => {
+    try {
+        const name = "Guest";
+        const { videoId } = req.params;
+        const { comment } = req.body;
+
+        const newComment = await commentsServices.addGuestVideoComment(videoId, name, comment);
+
+        const room = videoId;
+        socket.getIO().to(room).emit("chat_message", newComment);
+        return res.json({
+            data: newComment,
+        });
+    } catch (err) {
+        next(err);
+    }
+};

@@ -17,4 +17,13 @@ router.post(
     commentsController.postVideoComment
 );
 
+router.post(
+    "/:videoId/guest",
+    celebrate({
+        [Segments.BODY]: videoComment,
+    }),
+    passport.authenticate("jwt", { session: false }),
+    commentsController.postGuestVideoComment
+);
+
 module.exports = router;

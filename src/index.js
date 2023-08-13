@@ -36,7 +36,7 @@ app.use((req, _, next) => {
 });
 
 // Routes
-app.use("/", router);
+app.use("/tokplay", router);
 
 // Error handling
 app.use(errors()); // Celebrate error handler

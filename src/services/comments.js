@@ -23,3 +23,22 @@ exports.addVideoComment = async (videoId, userId, username, comment) => {
         comment: result.comment,
     };
 };
+
+exports.addGuestVideoComment = async (videoId, username, comment) => {
+    const newComment = new Comment({
+        videoId,
+        userId: "Guest",
+        username,
+        comment,
+    });
+
+    const result = await newComment.save({});
+
+    return {
+        id: result._id,
+        videoId: result.videoId,
+        userId: result.userId,
+        username: result.username,
+        comment: result.comment,
+    };
+};
