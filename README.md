@@ -1,6 +1,6 @@
-# TokPlay
+# TokPlay Backend
 
-TokPlay is a video promotion website that allows users watch videos. This platform used for shops to showcase their videos and promote their products. By utilizing WebSocket for real-time chatting, users can comment on a video in real-time. Additionally, TokPlay implements JWT (JSON Web Token) for secure user login and account creation. TokPlay is used as a mid-term project in Generasi GIGIH 3.0.
+TokPlay is a video promotion website that allows users watch videos. This platform used for shops to showcase their videos and promote their products. By utilizing WebSocket for real-time chatting, users can comment on a video in real-time. Additionally, TokPlay implements JWT (JSON Web Token) for secure user login and account creation. TokPlay is used as a mid-term project in Generasi GIGIH 3.0. This repo is the backend part of the project. The backend and the frontend of the website is deployed to a vps with a nginx as the web server reverse proxy.
 
 ## Features
 
@@ -13,11 +13,18 @@ TokPlay is a video promotion website that allows users watch videos. This platfo
 
 ## Tech Stack
 
-**Server:** Node, Express, MongoDB
+**Server:** Node, Express, MongoDB, Nginx
 
-## Documentation
+## Links
+
+[Website](https://varomnrg.xyz/play)
+
+[API Links](https://varomnrg.xyz/tokplay)
 
 [API Structure Gist Documentation](https://gist.github.com/varomnrg/4d17bb6ccf4b1f926d7b9ba408e9e3ce)
+
+[Frontend repository](https://github.com/varomnrg/tokplay-fe)
+
 
 ## Database Schema
 
